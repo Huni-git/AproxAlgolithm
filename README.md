@@ -180,11 +180,17 @@ n=16
 
 ![3](https://user-images.githubusercontent.com/80510945/118803642-995a1400-b8de-11eb-89ec-887cb57097f2.jpg)
 
+## 7.근사 비율
+-Approx_Job-Scheduling 알고리즘의 근사해를 OPT'라 하고, 최적해를 OPT라고 할 때, OPT'<=2OPT이다.
+ -즉 근사해는 최적해의 2배를 넘지 않는다.
 
+![opt](https://user-images.githubusercontent.com/80510945/118804304-809e2e00-b8df-11eb-8d1d-717324d3b29b.jpg)
 
+가장 마지막으로 배정된 작업 i가 T부터 시작, 즉 OPT'=T+ti이다. 또한, T'는 작업 i를 제외한 평균 종료 시간이다. 따라서 T<=T'이다.
 
+마지막으로 T와 T'의 관계인, T<=T'를 이용한 OPT'<=2OPT 를 증명하는 과정을 보자.
 
-
+![opt1](https://user-images.githubusercontent.com/80510945/118807825-bc3af700-b8e3-11eb-814c-fb66d0ff89f6.jpg)
 
 
 
