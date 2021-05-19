@@ -114,13 +114,57 @@ public class JobSchedule {
 
 ## 4. Brute force
 지금 까지는 그리디 알고리즘으로 작업스케줄링의 근사해를 구했고 이제는 Bruteforce를 이용해 작업이 기계에 배정될 수 있는 경우의 수 즉 최적해를 구할 것이다. 
-
 Bruteforce코드를 구현하여 기계 2개 중 가장 오래 걸리는 시간을 알아낼 것이다.
 
 우선 만들고자 하는 Brute force의 수도 코드를 알아보자.
 ![제목 없음](https://user-images.githubusercontent.com/80510945/118797377-7c6e1280-b8d7-11eb-8367-1df56792e59c.jpg)
-
+~~ppt를 참고하여 수도코드를 작성했으며, 위를 바탕으로 프로그램 코드를 짠다.~~
 ## 5. 자바 코드
+```java
+import java.util.Random;
+public class Approx_Schedulling {
+	//x=작업의 개수, y=기계의 개수
+	public static int Approximation(int x, int y, int[] t) {
+		int [] M= new int[y]; //머신 M이 종료되는 시간.
+		//입력의 개수에 따라 M은 2,4,6,8개 등 다양해진다.
+		int max_job=0; // 오래 걸리는 기계를 찾아주기 위한 변수
+		for(int i=0;i<y;i++) {
+			M[i]=0;
+		} //모든 M[i]의 값을 초기화 후 작업을 진행.
+		for(int i=0;i<x;i++) {
+			int min_num=0;
+			for(int j=1;j<y;j++) {
+				if(M[j]<M[min_num]) { //제일 먼저 끝나는 기계에 작업을 배정하기 위해
+					min_num=j; //j가 최소값이 된다.
+				}
+			}
+			M[min_num]=M[min_num]+t[i]; //제일 먼저 끝나는 작업에 시간을 추가해준다.
+		}
+		for(int i=0;i<y;i++) { //기계 2개 중에 더 시간이 많이 들어간 친구를 찾아주는 역할
+			if(M[i]>max_job) {
+				max_job=M[i];
+			}
+		}
+		return max_job; // 가장 오래걸린 작업의 시간
+	}
+	public static void main(String[] args) {
+		int n=4;
+		int m=2;
+		Random random=new Random();
+		int [] time= new int[n]; //작업 n개의 수행 시간 
+		System.out.print("작업시간:");
+		int i;
+		for(i=0;i<n;i++) {
+			time[i]= random.nextInt(9)+1; //1~9초까지의 작업시간
+			if(i==n-1)
+				break; //작업시간 마지막은 반복문을 빠져나간 후 작성해준다.
+			System.out.print(time[i]+",");
+		}
+		System.out.println(time[i]);
+		System.out.println("두 기계 중 더 많은 시간을 소요하는 작업 시간: "+Approximation(n,m,time));
+	}
+}
+```
 
 
 
