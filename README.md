@@ -118,6 +118,9 @@ public class JobSchedule {
 Bruteforce코드를 구현하여 기계 2개 중 가장 오래 걸리는 시간을 알아낼 것이다.
 
 우선 만들고자 하는 Brute force의 수도 코드를 알아보자.
+![제목 없음](https://user-images.githubusercontent.com/80510945/118797377-7c6e1280-b8d7-11eb-8367-1df56792e59c.jpg)
+
+## 5. 자바 코드
 
 
 
