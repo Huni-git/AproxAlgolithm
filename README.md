@@ -111,3 +111,21 @@ public class JobSchedule {
 ![제목 없음](https://user-images.githubusercontent.com/80510945/118795749-e2f23100-b8d5-11eb-9ae1-cf5b38241b32.jpg)
 
 ~~위 내용은 그리디 알고리즘 과제 내용 중 일부 내용을 수정 본인 깃허브에서 가져와 그대로 작성한 내용이다.~~
+
+## 4. Brute force
+지금 까지는 그리디 알고리즘으로 작업스케줄링의 근사해를 구했고 이제는 Bruteforce를 이용해 작업이 기계에 배정될 수 있는 경우의 수 즉 최적해를 구할 것이다. 
+
+Bruteforce코드를 구현하여 기계 2개 중 가장 오래 걸리는 시간을 알아낼 것이다.
+
+우선 만들고자 하는 Brute force의 수도 코드를 알아보자.
+
+
+
+
+
+
+
+
+
+
+
