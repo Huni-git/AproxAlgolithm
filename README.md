@@ -169,12 +169,15 @@ public class Approx_Schedulling {
 ```
 ## 6.코드결과
 n=4
+
 ![1](https://user-images.githubusercontent.com/80510945/118803554-762f6480-b8de-11eb-9e20-cb6f7811e830.jpg)
 
 n=8
+
 ![2](https://user-images.githubusercontent.com/80510945/118803624-919a6f80-b8de-11eb-97ac-741b74f74a6a.jpg)
 
 n=16
+
 ![3](https://user-images.githubusercontent.com/80510945/118803642-995a1400-b8de-11eb-89ec-887cb57097f2.jpg)
 
 
